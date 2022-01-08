@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import styled from 'styled-components';
+import Modal from './components/modal';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const AppWrapper = styled.div`
+	/* top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0; */
+	height: 100vh;
+	width: 100vw;
+	/* z-index: 9998; */
+	/* position: fixed; */
+	background: #000;
+	background-color: rgba(0, 0, 0, 0.3);
+`
+
+const App = () => {
+	return (
+		<AppWrapper>
+			<Modal />
+		</AppWrapper>
+	);
 }
-
+ 
 export default App;
